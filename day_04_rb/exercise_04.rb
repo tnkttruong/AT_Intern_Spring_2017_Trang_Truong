@@ -2,21 +2,32 @@ class Century
 
 	def input_number
 		puts "Input the year"
-		@year = gets.chomp.to_i
-
+		year = gets.chomp
+    while !checkInteger(year) do
+      puts "Please input a Year is a integer"
+      year = gets.chomp
+    end
+    return year.to_i
 	end
 
-	def return_century
-		input_number
-		if  @year%100 > 0
-			centuryFromYear = @year/100 + 1
+	def return_century(year)
+		if  year%100 > 0
+			return year/100 + 1
 		else
-			centuryFromYear = @year/100
+			return year/100
 		end
-		puts "centuryFromYear(#{@year}) = #{centuryFromYear}."
 	end
+
+	def checkInteger(number)
+    if number.match /^[0-9]+$/
+      return true
+    else false
+    end
+  end
 end
 
 century = Century.new()
-century.return_century()
+year = century.input_number()
+centuryFromYear=century.return_century(year)
+puts "centuryFromYear(#{year}) = #{centuryFromYear}."
 

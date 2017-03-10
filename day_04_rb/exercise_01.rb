@@ -30,3 +30,4 @@ class Info
   info = Info.new()
   info.input_info
   info.create_info_file
+  

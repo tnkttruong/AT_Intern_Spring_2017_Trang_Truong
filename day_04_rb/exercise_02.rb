@@ -1,3 +1,4 @@
+require 'pry'
 require 'active_support/all'
 class Report
   def initialize(path)
@@ -36,9 +37,11 @@ class Report
     report_string = gets.chomp
     @report_file.write(title + "\n")
     @report_file.write(report_string + "\n")
-    puts "Do you want to input #{(line+1).ordinalize}?"
+    puts "Do you want to input #{(line+1).ordinalize}?( press 'n' to stop and others to continue)"
   end
 end
+
 puts "Input your info file path: "
 path = gets.chomp
 Report.new(path).input_report
+
