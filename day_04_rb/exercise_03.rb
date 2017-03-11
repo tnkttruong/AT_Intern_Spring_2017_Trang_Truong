@@ -14,7 +14,7 @@ class AddNumber
     return number1 + number2
   end
   def checkInteger(number)
-    if number.match /^[0-9]+$/
+    if number.match /^[-]{0,1}[0-9]+$/
       return true
     else false
     end
