@@ -1,24 +1,24 @@
 class Century  
 
-	def input_number
-		puts "Input the year"
-		year = gets.chomp
+  def input_number
+    puts "Input the year"
+    year = gets.chomp
     while !checkInteger(year) do
       puts "Please input a Year is a integer"
       year = gets.chomp
     end
     return year.to_i
-	end
+  end
 
-	def return_century(year)
-		if  year%100 > 0
-			return year/100 + 1
-		else
-			return year/100
-		end
-	end
+  def return_century(year)
+    if  year%100 > 0
+      return year/100 + 1
+    else
+      return year/100
+    end
+  end
 
-	def checkInteger(number)
+  def checkInteger(number)
     if number.match /^[0-9]+$/
       return true
     else false

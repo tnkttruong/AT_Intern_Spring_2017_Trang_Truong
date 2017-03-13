@@ -26,4 +26,3 @@ number1 = add_number.input_number(1)
 number2 = add_number.input_number(2)
 result = add_number.add_two_numbers(number1, number2)
 puts "add(#{number1}, #{number2}) = #{result}."
-
