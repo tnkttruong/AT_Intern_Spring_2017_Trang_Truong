@@ -1,6 +1,10 @@
 body{
 	margin: 0;
 }
+section{
+	float: left;
+	width: 80%;
+}
 .menu ul{
 	list-style: none;
 }
@@ -24,6 +28,9 @@ body{
 	float: left;
 	border-right:1px solid #bbb;
 	padding: 15px 30px 10px 30px;
+}
+.title{
+	float: left;
 }
 .clear{
 	clear: both;
