@@ -30,4 +30,3 @@ century = Century.new()
 year = century.input_number()
 centuryFromYear=century.return_century(year)
 puts "centuryFromYear(#{year}) = #{centuryFromYear}."
-
