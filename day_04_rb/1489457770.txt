@@ -1,0 +1,14 @@
+My name is Trang
+
+My team is ruby
+
+My mentor is Mr. Tien
+
+My link github is https://github.com/at-trangtruong/AT_Intern_Spring_2017_Trang_Truong
+
+Please input your line 1st: 
+1
+Please input your line 2nd: 
+z
+Please input your line 3rd: 
+n
