@@ -21,7 +21,6 @@ begin
    no+=1  
  end
  results = client.query("SELECT * FROM football_names")
- client.query("DELETE FROM football_names")
  results.each do |a| 
   puts a.inspect
 end
