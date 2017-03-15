@@ -13,10 +13,7 @@ class Check_prime_number
   end
 
   def checkInteger(number)
-    if number.match /^[0-9]+$/
-      return true
-    else false
-    end
+    return number.match /^[0-9]+$/ ? true : false
   end
 
   def check_prime(number)
