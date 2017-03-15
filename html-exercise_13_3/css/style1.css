@@ -1,0 +1,164 @@
+body{
+	margin: 0;
+}
+.menu ul, .none-style, .category{
+	list-style: none;
+}
+.logo{
+	float: left;
+	width: 60%;
+}
+.logo_icon{
+	float: left;
+	height: 100px;
+}
+.menu{
+	margin-top: 20px;
+}
+.menu ul {
+	border-top:1px solid #bbb;
+}
+.menu ul li a{
+	display: block;
+}
+.menu ul li{
+	float: left;
+	border-right:1px solid #bbb;
+	padding: 15px 30px 10px 30px;
+}
+.clear{
+	clear: both;
+}
+a{
+	text-decoration: none;
+}
+.icon{
+	height: 25px;
+}
+footer{
+	background-color: #03a9f4;
+	margin-top: 15px;
+}
+.item_footer{
+	float: left;
+	width: 30%;
+}
+.item_footer ul{
+	margin-left: -20px;
+}
+header{
+	
+}
+main{
+	width: 75%;
+	float: left;
+	padding-top: 10px;	
+}
+.news{
+	margin-left: 3%;
+	width: 30%;
+	float: left;
+	border:1px solid #bbb;
+	margin-bottom: 20px;
+}
+.news img{
+	width: 220px;
+}
+.news p{
+	padding: 10px 10px 5px 10px;
+	margin-bottom: 15px;
+}
+.news a{
+	float: right;
+}
+.header_top{
+	padding: 30px 150px 0px 150px;
+}
+.content{
+	padding: 50px 150px 0px 150px;
+}
+.phonenumber{
+	color: blue;
+}
+.home{
+	height: 65px;
+	background: url("../images/logo_home.jpg") no-repeat;
+	padding-top: 25px;
+	padding-left: 70px;
+}
+.home a{
+	color: black;
+}
+* {
+      box-sizing: border-box;
+
+    }
+.social_network{
+	margin-left: 140px;
+	float: left;
+}
+.title_aside{
+	font-weight: 100;
+	background-color: #f1f1f1;
+	padding: 10px 3px;
+	padding: 10px;
+}
+.title_aside a{
+	color: black;
+}
+.title_aside span{
+	float: right;
+	font-size: 40px;
+	margin-top: -18px;
+}
+.book_room{
+	background-color: #f1f1f1;
+	padding: 10px 15px;
+}
+.book_rom .title_aside{
+	padding: 0px;
+}
+form button{
+	margin-left: 70px;
+}
+.footer_top{
+	padding: 10px 20px 0px 100px;
+	border-bottom:1px solid #bbb;
+}
+.footer_bottom{
+	padding: 20px 0px 20px 100px;
+}
+.item_footer h4, .item_footer ul li a, .footer_bottom span{
+	color: white;
+};
+aside{
+	float: left; 
+	width: 20%;
+}
+.disc_cat{
+	list-style-type: disc;
+}
+#cat{
+	padding: 0xp;
+	margin-left: -40px;
+	width: 116%;
+}
+.category ul li a{
+	color: black;
+}
+.category ul li{
+	margin-bottom: 10px;
+}
+.header_top_right{
+	float: right;
+	
+}
+.header_top_right img{
+	height: 30px;
+}
+figcaption{
+	text-align: center;
+}
+.submit{
+	margin-top: 10px;
+}
