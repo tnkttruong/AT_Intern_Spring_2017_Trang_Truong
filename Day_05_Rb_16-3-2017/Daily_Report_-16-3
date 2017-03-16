@@ -1,0 +1,56 @@
+Daily Report 16/3/2017
+#Ruby Array, Hash
+##Ruby Array
+Array is
+Arrays are ordered, integer-indexed collections of any object.
+- Creat array:
+> arr = Array.new
+> arr1 = [0,1,"a",[2,3]]
+> Array.new(3)
+> Array.new(3, true)
+
+- get value:
+> arr[0]
+> arr.slice[0]
+> arr.get_values[0]
+> arr.at(0)
+> arr.first
+> arr.last
+- Add value:
+> arr.push()
+> arr << 
+- Delete value:
+>  arr.pop
+> arr.delete_at()
+> arr.delete()
+- Iterating over Arrays
+> - arr.each {|i| puts i}
+> - arr.map {|i| puts i}
+> - arr.collect {|i| puts i}
+> - arr.selec
+> - arr.detect
+
+- Delete value
+> arr.delete_if { |a| a < 2 }
+> arr.keep_if { |a| a >= 2 }
+
+## Ruby Hash
+A hash is created using key-value pairs between { }:
+### Creat hash:
+> Hash.new
+> Hash.new(0)
+> { "a" => 1, "b" => 2 } "a", "b" : key , 1,2: value
+> { a: 1, b: 2 } a: , b: value, 1, 2 value
+### Method of hash
+> puts hash.keys 
+> puts hash.values
+> puts hash.size
+> hash.dup => copy hash
+> hash.clear
+> hash.delete [index]
+> hash.shift delete first element
+###Iterating over Arrays
+> hash.each { |k, v| puts "Key: #{k}, Value: #{v}" }
+> hash.each_key { |key| puts "#{key}" }
+> hash.each_value { |val| puts "#{val}" }
+> hash.each_pair { |k, v| puts "Key: #{k}, Value: #{v}" }
