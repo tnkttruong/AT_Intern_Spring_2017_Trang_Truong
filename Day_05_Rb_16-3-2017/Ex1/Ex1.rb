@@ -1,10 +1,16 @@
 require 'mysql2'
 require "pry"
 require 'benchmark'
-require_relative "model.rb"
+require "./model.rb"
+require "./error.rb"
 
 class Football_management
   include Model
+
+  def main
+    connect
+    select_case
+  end
 
   def print_menu
     puts "===WELLCOME TO FOOTBALL CHAMPION MANAGEMENT SYSTEM==="
@@ -50,10 +56,6 @@ class Football_management
     }
   end
 
-  def main
-    connect
-  end
-
   def select_case
     print_menu
     check = true
@@ -82,6 +84,7 @@ class Football_management
           puts "Press e to back menu"
           e = gets.chomp
         end
+        system "clear"
         main
       else
         print "Please input choice is an integer from 0 to 6: "
@@ -267,7 +270,6 @@ def display_team_OF_semi_final
         else #có 2 đội nhì = điểm
           second_team_id = check_achievement(teams[1]["teams_id"],teams[2]["teams_id"])
           puts second_team
-          binding.pry
           second_team = get_team_by_id(second_team_id)
           print "| ", i.ljust(4),"|  ",teams[0]["name"].ljust(15),"| ",teams[0]["points"].to_s.ljust(5),"|  ",
           second_team["name"].ljust(15),"| ",second_team["points"].to_s.ljust(5), "|\n"
