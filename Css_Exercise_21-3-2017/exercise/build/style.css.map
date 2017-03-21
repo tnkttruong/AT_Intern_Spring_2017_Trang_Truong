@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAE;EACI,UAAU,EAAE,UAAU",
+"sources": ["../dev/style.scss"],
+"names": [],
+"file": "style.css"
+}
