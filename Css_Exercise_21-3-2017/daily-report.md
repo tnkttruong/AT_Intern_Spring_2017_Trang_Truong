@@ -72,6 +72,7 @@ This rule contains conditional statements for targeting styles to specific scree
 where
 
 ```<media-query-list>```  is composed of a optional media type and/or a number of media features.
+
 In head you must have this tag: 
 
 ``` <meta name="viewport" content="width=device-width, initial-scale=1.0"/> ```
