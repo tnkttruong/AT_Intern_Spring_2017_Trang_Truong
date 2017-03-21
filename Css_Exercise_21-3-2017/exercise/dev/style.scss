@@ -1,3 +1,121 @@
+
 * {
-      box-sizing: border-box;
-    }
+	box-sizing: border-box;
+}
+%floatleft{
+	float:left;
+}
+%paddingbt{
+	margin-right: 180px;
+	margin-left: 180px;
+	width: 1240px;
+}
+a{
+	text-decoration: none;
+}
+.clr{
+	clear: both;
+}
+body{
+	padding: 10px 0px 25px 0px;
+	width: 1600px;
+}
+header{
+	@extend %paddingbt;
+	.logo{
+		@extend %floatleft;
+		img{
+			margin-right: 220px;
+		}
+	}
+	.header-right{
+		float: right;
+		.head-right-top{
+			.phone{
+				@extend %floatleft;
+			}
+			.care{
+				float: right;
+				span{
+					color: #FDB300;
+				}
+			}
+		}
+		.menu{
+			width: 890px;
+			ul{
+				list-style: none;
+				li {
+					@extend %floatleft;
+					width: 50px;
+					margin-right: 34px;
+					a{
+						display: block;
+					}
+				}
+			}
+
+		}
+	}
+}
+.banner{
+
+	background: url("../images/banner.jpg") no-repeat;
+}
+section{
+	@extend %paddingbt;	
+	aside{
+
+	}
+	main{
+		padding-bottom: 32px;
+		.marginl{
+			margin-left: 18px;
+		}
+		.marginr{
+			margin-right: 18px;
+			margin-left: 18px;
+		}
+		
+		figure{
+			@extend %floatleft;
+			border-radius: 3px;
+			border: 1px solid #ddd;
+			margin:0px 0px 21px 0px;
+			img{
+
+			}
+			figcaption{
+
+			}
+			p{
+				span{
+
+				}
+			}
+		}
+	}
+
+}
+footer{
+	@extend %paddingbt;	
+	border-top:1px solid #bbb;
+	div{
+		@extend %floatleft;
+	}
+	ul{
+		list-style: none;
+	}
+	.logo_footer{
+
+	}
+	.info{
+
+	}
+	.community{
+
+	}
+	.contact{
+
+	}
+}
