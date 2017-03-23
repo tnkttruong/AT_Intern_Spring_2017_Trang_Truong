@@ -1,0 +1,30 @@
+@import "_variable.scss";
+@import "mixin.scss";
+%font-face{
+	font-family: "UTM-BryantLG", serif;
+}
+%block_contact{
+	p{
+		margin: 0px 0px 0px 8px;
+		@include float_block($float_l);
+		font-size: 13px;
+		line-height: 1.6;
+		span{
+			font-size: 14px;
+			color: $color-phone;
+			font-weight: bold;
+		}
+	}
+}
+%paddingbt{
+	margin-right: 180px;
+	margin-left: 180px;
+	width: 1240px;
+}
+%list-none{
+	list-style: none;
+}
+%category-text{
+	font-size: 25px;
+	color: $color-category;
+}

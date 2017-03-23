@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Exercise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="build/style.css">
 </head>
 <body>
@@ -14,16 +15,18 @@
       <div class="head-right-top">
         <div class = "phone">
           <img src="images/phone.jpg" alt="phone">
-          <p>Chăm sóc khách hàng</p>
-          <p>19008119</p>
+          <p>Chăm sóc khách hàng<br >
+            <span>1900 8119</span>
+          </p>
         </div>
         <div class = "care">
           <img src="images/care.jpg" alt="care">
-          <p> Chăm sóc khách hàng ngoài giờ</p>
-          <p>Khách sạn: <span>01626757797</span>/ Tour: <span>0979038274</span></p>
+          <p> Chăm sóc khách hàng ngoài giờ<br >
+            Khách sạn: <span>01626 757 797</span>/ Tour: <span>0979 038 274</span>
+          </p>
         </div>
+        <div class="clr"></div>
       </div>
-      <div class="clr"></div>
       <nav class="menu">
         <ul>
           <li ><a href="#">TRANG CHỦ</a></li>
@@ -34,23 +37,31 @@
           <li><a href="#">VÉ MÁY BAY</a></li>
           <li><a href="#">TIN TỨC</a></li>
           <li><a href="#">LIÊN HỆ</a></li>
-
         </ul>
       </nav>
     </div>
     <div class="clr"></div>
   </header>
   <div class="banner">
-    <h2>Trải nghiệm thú vị</h2>
-    <h2>thỏa sức khám phá</h2>
+    <h2 class="solo-top">TRẢI NGHIỆM THÚ VỊ</h2>
+    <h2 class="solo-bot">THỎA SỨC KHÁM PHÁ</h2>
   </div>
   <section>
     <aside>
       <h1>TOUR</h1>
       <div class="category">
-       <a href="#" alt""><img src="images/noibat.jpg" alt=""></a>
-       <a href="#" alt""><img src="images/nuocngoai.jpg" alt=""></a>
-       <a href="#" alt""><img src="images/trongnuoc.jpg" alt=""></a>
+      <div>
+       <a href="#" alt""><img src="images/noibat.jpg" alt=""></a> <h3><a href="#" alt="">TOUR NỔI BẬT</a></h3>
+       </div>
+       <div class="center-cat">
+       <a href="#" alt""><img src="images/nuocngoai.jpg" alt=""></a><h3><a href="#" alt="">TOUR QUỐC TẾ</a></h3>
+       </div>
+       <div>
+       <a href="#" alt""><img src="images/trongnuoc.jpg" alt=""></a> <h3><a href="#" alt="">TOUR TRONG NƯỚC</a></h3>
+       </div>
+     </div>
+     <div class="clr">
+       
      </div>
    </aside>
    <main>
@@ -119,8 +130,8 @@
 </section>
 <footer>
   <div class="logo_footer">
-    <img src="images/logo.jpg" alt="logo">
-    <p>@2017 Bản quyền thuộc về Tnkt Truong</p>
+    <img src="images/logo_footer.jpg" alt="logo_footer">
+    <p>@2017-Bản quyền thuộc về Tnkt Truong</p>
   </div>
   <div class="info">
     <h3>THÔNG TIN</h3>
@@ -133,21 +144,20 @@
     </ul>
   </div>
   <div class="community">
-  <h3>CỘNG ĐỒNG</h3>
+    <h3>CỘNG ĐỒNG</h3>
     <ul>
       <li><a href="#" alt""><img src="images/face.jpg" alt="">Facebook</a></li>
       <li><a href="#" alt""><img src="images/google.jpg" alt="">Google+</a></li>
       <li><a href="#" alt""><img src="images/twich.jpg" alt="">Twitter</a></li>
-      <li><a href="#" alt""><img src="images/youtube.jpg" alt=""></a>Youtube</li>
+      <li><a href="#" alt""><img src="images/youtube.jpg" alt="">Youtube</a></li>
     </ul>
   </div>
   <div class="contact">
-    <p>Nhập email để  nhận giá tốt nhất từ HadaTour</p>
-    <input type="text" name="" value="" placeholder="">
+    <p class="contact-top">Nhập email để  nhận giá tốt nhất từ HadaTour</p>
+    <input type="text" name="" value="" placeholder="Nhập địa chỉ email">
     <button type="button"></button>
-    <p>Thiết kế bở <span>Kovo.vn</span></p>
+    <p class="float">Thiết kế bởi <span>Kovo.vn</span></p>
   </div>
 </footer>
-
 </body>
 </html>

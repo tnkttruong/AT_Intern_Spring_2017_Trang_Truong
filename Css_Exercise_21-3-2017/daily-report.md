@@ -13,6 +13,7 @@ Syntax
 @import url list-of-media-queries;
 
 where:
+
 - url:
 
 Is a ```<string>``` or a ```<uri>``` representing the location of the resource to import. The URL may be absolute or relative. Note that the URL need not actually specify a file; it can just specify the package name and part, and the appropriate file is chosen automatically (e.g. chrome://communicator/skin/).
@@ -84,6 +85,7 @@ Example
         width:100%;
     }
 }
+
  ```
 
 #Sass (Syntactically Awesome StyleSheets)
@@ -110,8 +112,10 @@ Sass lets you nest style selectors. This helps your organize your CSS by letting
         }
     }
 }
+
 ```
 - Variables:
+
 ```
 $text-color: red;
 
@@ -122,10 +126,13 @@ $text-color: red;
 .footer {
     background-color: $text-color;
 }
+
 ```
 - Extend/Inheritance:
 This is one of the most useful features of Sass. Using @extend lets you share a set of CSS properties from one selector to another. It helps keep your Sass very DRY.
+
 ```
+
 .sfb-1{
 	border: 1px solid red;
 }
@@ -145,12 +152,15 @@ result
 
 .button {
   padding: 10px; 
+
 ```
+
 - Mixin: @mixin
 It’s followed by the name of the mixin and optionally the arguments, and a block containing the contents of the mixin.
 Mixins are included in the css with the @include directive
 
 ```
+
 @mixin set_color($color){
 	color: $color;
 }
@@ -158,4 +168,6 @@ Mixins are included in the css with the @include directive
 .button{
 	@include set_color($text-color) 
 }
+
 ```
+

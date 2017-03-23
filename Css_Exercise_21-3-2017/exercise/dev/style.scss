@@ -1,14 +1,12 @@
-
+@import "global";
+@import "_variable";
+@import "mixin";
+@font-face {
+	font-family: UTM-BryantLG;
+	src: url("font/UTMBryantLG.ttf");
+}
 * {
 	box-sizing: border-box;
-}
-%floatleft{
-	float:left;
-}
-%paddingbt{
-	margin-right: 180px;
-	margin-left: 180px;
-	width: 1240px;
 }
 a{
 	text-decoration: none;
@@ -17,41 +15,50 @@ a{
 	clear: both;
 }
 body{
+	@include margin_l(0px);
 	padding: 10px 0px 25px 0px;
 	width: 1600px;
 }
 header{
 	@extend %paddingbt;
+	@include margin_b(10px);
 	.logo{
-		@extend %floatleft;
+		@include float_block($float_l);
+		@include margin_r(135px);
 		img{
-			margin-right: 220px;
 		}
 	}
 	.header-right{
-		float: right;
+		@include float_block($float_l);
 		.head-right-top{
 			.phone{
-				@extend %floatleft;
+				@include float_block($float_l);
+				@include margin_l(486px);
+				img{
+					@include float_block($float_l);
+				}
+				@extend %block_contact;
 			}
 			.care{
-				float: right;
-				span{
-					color: #FDB300;
+				@include float_block($float_r);
+				img{
+					@include float_block($float_l);
 				}
+				@extend %block_contact;
 			}
 		}
 		.menu{
-			width: 890px;
+			@extend %font-face;
 			ul{
-				list-style: none;
-				li {
-					@extend %floatleft;
-					width: 50px;
-					margin-right: 34px;
-					a{
-						display: block;
-					}
+				@include margin_l(-40px);;      
+				@extend %list-none;
+				li{
+					@include float_block($float_l);         
+					@include margin_r(44px);
+					font-size: 14px;
+				}
+				li:last-child{
+					@include margin_r(0px);
 				}
 			}
 
@@ -59,38 +66,79 @@ header{
 	}
 }
 .banner{
-
 	background: url("../images/banner.jpg") no-repeat;
+	height: 180px;
+	padding: 50px 0px;
+	h2{
+		@extend %font-face;
+		color: $color-category;
+		font-size: 36px;
+		font-weight: normal;
+		margin: 0px;
+		&.solo-top{
+			@include margin_l(198px);
+		}
+		&.solo-bot{
+			@include margin_l(450px);
+		}
+	}
 }
 section{
-	@extend %paddingbt;	
+	@extend %paddingbt;
+	@include padding_b(12px);
 	aside{
-
+		@include margin_b(49px);
+		h1{
+			@extend %font-face;
+			font-size: 30px;
+		}
+		.category{
+			div{
+				position: relative;
+				@include float_block($float_l);
+				h3{
+					@extend %font-face;
+					position: absolute;
+					@extend %category-text;
+					top: 25px;
+					left: 105px;
+					a{
+						color: $color-category;
+					}
+				}
+				&.center-cat{
+					@include margin_l(17px);
+					@include margin_r(17px);
+				}
+			}
+		}
 	}
 	main{
-		padding-bottom: 32px;
+		@include padding_b(32px);
 		.marginl{
-			margin-left: 18px;
+			@include margin_l(18px);
 		}
 		.marginr{
-			margin-right: 18px;
-			margin-left: 18px;
+			@include margin_l(18px);
+			@include margin_r(18px);
 		}
 		
 		figure{
-			@extend %floatleft;
+			@include float_block($float_l);
 			border-radius: 3px;
 			border: 1px solid #ddd;
 			margin:0px 0px 21px 0px;
-			img{
-
-			}
 			figcaption{
-
+				font-family: Arial;
+				font-weight: bold;
+				@include margin_l(17px);
+				@include margin_t(15px);
 			}
 			p{
+				margin: 10px 0px 15px 17px;
 				span{
-
+					color: $color-money;
+					font-weight: bold;
 				}
 			}
 		}
@@ -100,22 +148,68 @@ section{
 footer{
 	@extend %paddingbt;	
 	border-top:1px solid #bbb;
+	@include padding_t(34px);
 	div{
-		@extend %floatleft;
+		@include float_block($float_l);
+
+		h3{
+			margin: 0px 0px 17px 0px;
+		}
 	}
 	ul{
-		list-style: none;
+		@extend %list-none;
+		padding: 0px;
+		margin: 0px;
+		li{
+			@include margin_t(8px);
+		}
 	}
 	.logo_footer{
+		p{
+			font-size: 16px;
+		}
+		img{
+			@include margin_b(34px);
+		}
+		@include margin_r(25px);
 
 	}
 	.info{
+		@include margin_r(135px);
 
 	}
 	.community{
-
+		@include margin_r(0p);
+		img{
+			@include margin_r(10px);
+		}
 	}
 	.contact{
-
+		.contact-top{
+			@include margin_b(28px);
+			@include margin_t(40px);
+		}
+		input{
+			@include float_block($float_l);
+			height: 50px;
+			width: 363px;
+		}
+		button{
+			width: 83px;
+			height: 50px;
+			background: url("../images/submit.jpg") no-repeat;
+			border: none;
+		}
+		.float{
+			@include float_block($float_r);
+			@include margin_t(40px);
+			span{
+				color: $color-own;
+			}
+		}
+		width: 450px;
+		height: 205px;
+		@include margin_l(93px);
 	}
 }
+

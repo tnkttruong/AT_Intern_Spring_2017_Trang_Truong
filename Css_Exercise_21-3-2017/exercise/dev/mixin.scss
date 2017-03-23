@@ -1,0 +1,21 @@
+@mixin float_block($float){
+	float: $float;
+}
+@mixin margin_l($value){
+	margin-left: $value; 
+}
+@mixin margin_r($value){
+	margin-right: $value; 
+}
+@mixin margin_t($value){
+	margin-top: $value; 
+}
+@mixin margin_b($value){
+	margin-bottom: $value; 
+}
+@mixin padding_b($value){
+	padding-bottom: $value;
+}
+@mixin padding_t($value){
+	padding-top: $value;
+}

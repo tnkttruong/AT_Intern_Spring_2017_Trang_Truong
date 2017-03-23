@@ -1,13 +1,33 @@
-* {
-  box-sizing: border-box; }
+header .header-right .menu, .banner h2, section aside h1, section aside .category div h3 {
+  font-family: "UTM-BryantLG", serif; }
 
-header .logo, header .header-right .head-right-top .phone, header .header-right .menu ul li, section main figure, footer div {
-  float: left; }
+header .header-right .head-right-top .phone p, header .header-right .head-right-top .care p {
+  margin: 0px 0px 0px 8px;
+  float: left;
+  font-size: 13px;
+  line-height: 1.6; }
+  header .header-right .head-right-top .phone p span, header .header-right .head-right-top .care p span {
+    font-size: 14px;
+    color: #FDB300;
+    font-weight: bold; }
 
 header, section, footer {
   margin-right: 180px;
   margin-left: 180px;
   width: 1240px; }
+
+header .header-right .menu ul, footer ul {
+  list-style: none; }
+
+section aside .category div h3 {
+  font-size: 25px;
+  color: white; }
+
+@font-face {
+  font-family: UTM-BryantLG;
+  src: url("font/UTMBryantLG.ttf"); }
+* {
+  box-sizing: border-box; }
 
 a {
   text-decoration: none; }
@@ -16,45 +36,134 @@ a {
   clear: both; }
 
 body {
+  margin-left: 0px;
   padding: 10px 0px 25px 0px;
   width: 1600px; }
 
-header .logo img {
-  margin-right: 220px; }
-header .header-right {
-  float: right; }
-  header .header-right .head-right-top .care {
-    float: right; }
-    header .header-right .head-right-top .care span {
-      color: #FDB300; }
-  header .header-right .menu {
-    width: 890px; }
+header {
+  margin-bottom: 10px; }
+  header .logo {
+    float: left;
+    margin-right: 135px; }
+  header .header-right {
+    float: left; }
+    header .header-right .head-right-top .phone {
+      float: left;
+      margin-left: 486px; }
+      header .header-right .head-right-top .phone img {
+        float: left; }
+    header .header-right .head-right-top .care {
+      float: right; }
+      header .header-right .head-right-top .care img {
+        float: left; }
     header .header-right .menu ul {
-      list-style: none; }
+      margin-left: -40px; }
       header .header-right .menu ul li {
-        width: 50px;
-        margin-right: 34px; }
-        header .header-right .menu ul li a {
-          display: block; }
+        float: left;
+        margin-right: 44px;
+        font-size: 14px; }
+      header .header-right .menu ul li:last-child {
+        margin-right: 0px; }
 
 .banner {
-  background: url("../images/banner.jpg") no-repeat; }
+  background: url("../images/banner.jpg") no-repeat;
+  height: 180px;
+  padding: 50px 0px; }
+  .banner h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0px; }
+    .banner h2.solo-top {
+      margin-left: 198px; }
+    .banner h2.solo-bot {
+      margin-left: 450px; }
 
-section main {
-  padding-bottom: 32px; }
-  section main .marginl {
-    margin-left: 18px; }
-  section main .marginr {
-    margin-right: 18px;
-    margin-left: 18px; }
-  section main figure {
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    margin: 0px 0px 21px 0px; }
+section {
+  padding-bottom: 12px; }
+  section aside {
+    margin-bottom: 49px; }
+    section aside h1 {
+      font-size: 30px; }
+    section aside .category div {
+      position: relative;
+      float: left; }
+      section aside .category div h3 {
+        position: absolute;
+        top: 25px;
+        left: 105px; }
+        section aside .category div h3 a {
+          color: white; }
+      section aside .category div.center-cat {
+        margin-left: 17px;
+        margin-right: 17px; }
+  section main {
+    padding-bottom: 32px; }
+    section main .marginl {
+      margin-left: 18px; }
+    section main .marginr {
+      margin-left: 18px;
+      margin-right: 18px; }
+    section main figure {
+      float: left;
+      border-radius: 3px;
+      border: 1px solid #ddd;
+      margin: 0px 0px 21px 0px; }
+      section main figure figcaption {
+        font-family: Arial;
+        font-weight: bold;
+        margin-left: 17px;
+        margin-top: 15px; }
+      section main figure p {
+        margin: 10px 0px 15px 17px; }
+        section main figure p span {
+          color: #2AB5F2;
+          font-weight: bold; }
 
 footer {
-  border-top: 1px solid #bbb; }
+  border-top: 1px solid #bbb;
+  padding-top: 34px; }
+  footer div {
+    float: left; }
+    footer div h3 {
+      margin: 0px 0px 17px 0px; }
   footer ul {
-    list-style: none; }
+    padding: 0px;
+    margin: 0px; }
+    footer ul li {
+      margin-top: 8px; }
+  footer .logo_footer {
+    margin-right: 25px; }
+    footer .logo_footer p {
+      font-size: 16px; }
+    footer .logo_footer img {
+      margin-bottom: 34px; }
+  footer .info {
+    margin-right: 135px; }
+  footer .community {
+    margin-right: 0p; }
+    footer .community img {
+      margin-right: 10px; }
+  footer .contact {
+    width: 450px;
+    height: 205px;
+    margin-left: 93px; }
+    footer .contact .contact-top {
+      margin-bottom: 28px;
+      margin-top: 40px; }
+    footer .contact input {
+      float: left;
+      height: 50px;
+      width: 363px; }
+    footer .contact button {
+      width: 83px;
+      height: 50px;
+      background: url("../images/submit.jpg") no-repeat;
+      border: none; }
+    footer .contact .float {
+      float: right;
+      margin-top: 40px; }
+      footer .contact .float span {
+        color: #00D35B; }
 
 /*# sourceMappingURL=style.css.map */
