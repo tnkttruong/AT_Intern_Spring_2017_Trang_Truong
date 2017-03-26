@@ -1,4 +1,3 @@
-require_relative 'lib/error.rb'
 require_relative 'lib/mysql_adapter.rb'
 require_relative 'service/football_service.rb'
 require_relative 'menu_block.rb'

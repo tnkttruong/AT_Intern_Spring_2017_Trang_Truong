@@ -2,7 +2,6 @@ require 'mysql2'
 require "pry"
 require 'benchmark'
 require "./model.rb"
-require "./error.rb"
 
 class Football_management
   include Model

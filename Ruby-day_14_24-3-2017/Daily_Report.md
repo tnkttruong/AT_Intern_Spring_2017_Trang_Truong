@@ -183,4 +183,3 @@ A.new.private_method_self
 #=>this is protected method
 
 ```
-
