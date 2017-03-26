@@ -4,6 +4,7 @@ require_relative '../service/football_service.rb'
 module League
 
   def get_data_from_web
+    #get source code html of Result table from web with url
     url="https://en.wikipedia.org/wiki/2015%E2%80%9316_Premier_League#Result_table"
     check = false
     rt=false
@@ -24,6 +25,7 @@ module League
   end
 
   def covert_arr_str arr_str
+    #Convert Result table's html to array, each row is a sub array
     sub_arr = []
     result = []
     check = false
@@ -42,6 +44,7 @@ module League
   end
 
   def add_team_name arr_name
+    #add name to database
     arr_name.shift
     arr_name.shift
     arr_name.each do |i|
@@ -55,6 +58,7 @@ module League
   end
 
   def get_score result
+    #get score and handle then update database
     x=1
     result.map{|i|
       y=1
@@ -91,6 +95,6 @@ module League
       f.write("| " + (arr_teams.index(team)+1).to_s.ljust(4) + "| " + team["name"].ljust(25) + "| " +
         team["Pts"].to_s.ljust(4) + "|\n")
       f.write("----------------------------------------\n")
-   end
- end
+    end
+  end
 end
