@@ -80,7 +80,9 @@ font-family: "UTM-BryantLG", serif;
 #**Sass**
 
 ##How does "CSS Pre-processor" work?
-we code at .scss file then it will be converted to a css flie and our web will use css file
+
+We code at .scss file then it will be converted to a css flie and our web will use css file
+
 ##What are the advantages when working with Sass?
 
 - Fully CSS-compatible.
@@ -90,7 +92,9 @@ we code at .scss file then it will be converted to a css flie and our web will u
 - Well-formatted, customizable output.
 
 ##How to write `pseudo-elements` and `pseudo-classes` in Sass?
+
 ###pseudo-classes: 
+
 ```
 ul{
 	li{
@@ -103,6 +107,7 @@ ul{
 ```
 
 ###pseudo-elements:
+
 ```
 p {
   font-weight: bold;
@@ -112,7 +117,9 @@ p {
 ```
 
 ##Describe about rules to working with SASS?
+
 ### Nested
+
 Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.
 ```css
 body{
@@ -126,7 +133,9 @@ body{
   }
 }
 ```
+
 ###Variables
+
 creat a variable and you can use it again.
 ```css
 	$color: red;
@@ -136,7 +145,9 @@ creat a variable and you can use it again.
 ```
 
 ###Extends
+
 One of the more interesting features of Sass, this lets you attach one class’ attributes to another class.
+
 ```css
 %list-none{
 	list-style: none;
@@ -146,9 +157,13 @@ header{
 		@extend %list-none;
 	}
 }
+
 ```
+
 ### Mixins:
+
 A mixin lets you make groups of CSS declarations that you want to reuse throughout your site
+
 ```css
 $float_l: left;
 @mixin float_block($float){
