@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercise</title>
+</head>
+<body>
+  <div>
+    <input type="text" name="name">
+    <button type="button" id="submit" onclick="addName()">Submit</button>
+    <h1>Name List</h1>
+    <ul id="result">
+    </ul>
+  </div>
+  <script type="text/javascript">
+    var list = document.getElementById("result");
+    var newName = document.getElementsByName("name");
+    function addName(){
+      var li = document.createElement('li');
+      li.innerHTML = newName[0].value;
+      list.prepend(li)
+    }
+  </script>
+</body>
+</html>
