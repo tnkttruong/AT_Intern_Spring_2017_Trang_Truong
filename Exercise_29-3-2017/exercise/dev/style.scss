@@ -1,0 +1,217 @@
+@import "global";
+@import "_variable";
+@import "mixin";
+@font-face {
+	font-family: UTM-BryantLG;
+	src: url("font/UTMBryantLG.ttf");
+}
+* {
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+.clr{
+	clear: both;
+}
+body{
+	@include margin_l(0px);
+	padding: 10px 0px 25px 0px;
+	width: 1600px;
+}
+header{
+	@extend %paddingbt;
+	@include margin_b(10px);
+	.logo{
+		@include float_block($float_l);
+		@include margin_r(135px);
+		img{
+		}
+	}
+	.header-right{
+		@include float_block($float_l);
+		.head-right-top{
+			.phone{
+				@include float_block($float_l);
+				@include margin_l(486px);
+				img{
+					@include float_block($float_l);
+				}
+				@extend %block_contact;
+			}
+			.care{
+				@include float_block($float_r);
+				img{
+					@include float_block($float_l);
+				}
+				@extend %block_contact;
+			}
+		}
+		.menu{
+			@extend %font-face;
+			ul{
+				@include margin_l(-40px);;      
+				@extend %list-none;
+				li{
+					@include float_block($float_l);         
+					@include margin_r(44px);
+					font-size: 14px;
+				}
+				li:last-child{
+					@include margin_r(0px);
+				}
+			}
+
+		}
+	}
+}
+.banner{
+	background: url("../images/banner.jpg") no-repeat;
+	height: 180px;
+	padding: 50px 0px;
+	h2{
+		@extend %font-face;
+		color: $color-category;
+		font-size: 36px;
+		font-weight: normal;
+		margin: 0px;
+		&.solo-top{
+			@include margin_l(198px);
+		}
+		&.solo-bot{
+			@include margin_l(450px);
+		}
+	}
+}
+section{
+	@extend %paddingbt;
+	@include padding_b(12px);
+	aside{
+		@include margin_b(49px);
+		h1{
+			@extend %font-face;
+			font-size: 30px;
+		}
+		.category{
+			div{
+				position: relative;
+				@include float_block($float_l);
+				h3{
+					@extend %font-face;
+					position: absolute;
+					@extend %category-text;
+					top: 25px;
+					left: 105px;
+					a{
+						color: $color-category;
+					}
+				}
+				&.center-cat{
+					@include margin_l(17px);
+					@include margin_r(17px);
+				}
+			}
+		}
+	}
+	main{
+		@include padding_b(32px);
+		.marginl{
+			@include margin_l(18px);
+		}
+		.marginr{
+			@include margin_l(18px);
+			@include margin_r(18px);
+		}
+		
+		figure{
+			@include float_block($float_l);
+			border-radius: 3px;
+			border: 1px solid #ddd;
+			margin:0px 0px 21px 0px;
+			figcaption{
+				font-family: Arial;
+				font-weight: bold;
+				@include margin_l(17px);
+				@include margin_t(15px);
+			}
+			p{
+				margin: 10px 0px 15px 17px;
+				span{
+					color: $color-money;
+					font-weight: bold;
+				}
+			}
+			span{
+			}
+		}
+	}
+
+}
+footer{
+	@extend %paddingbt;	
+	border-top:1px solid #bbb;
+	@include padding_t(34px);
+	div{
+		@include float_block($float_l);
+
+		h3{
+			margin: 0px 0px 17px 0px;
+		}
+	}
+	ul{
+		@extend %list-none;
+		padding: 0px;
+		margin: 0px;
+		li{
+			@include margin_t(8px);
+		}
+	}
+	.logo_footer{
+		p{
+			font-size: 16px;
+		}
+		img{
+			@include margin_b(34px);
+		}
+		@include margin_r(25px);
+
+	}
+	.info{
+		@include margin_r(135px);
+
+	}
+	.community{
+		@include margin_r(0p);
+		img{
+			@include margin_r(10px);
+		}
+	}
+	.contact{
+		.contact-top{
+			@include margin_b(28px);
+			@include margin_t(40px);
+		}
+		input{
+			@include float_block($float_l);
+			height: 50px;
+			width: 363px;
+		}
+		button{
+			width: 83px;
+			height: 50px;
+			background: url("../images/submit.jpg") no-repeat;
+			border: none;
+		}
+		.float{
+			@include float_block($float_r);
+			@include margin_t(40px);
+			span{
+				color: $color-own;
+			}
+		}
+		width: 450px;
+		height: 205px;
+		@include margin_l(93px);
+	}
+}
+
