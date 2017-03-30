@@ -84,7 +84,7 @@ header{
 	}
 }
 section{
-	@extend %paddingbt;
+	margin-left: 180px;
 	@include padding_b(12px);
 	aside{
 		@include margin_b(49px);
@@ -113,39 +113,59 @@ section{
 			}
 		}
 	}
-	main{
-		@include padding_b(32px);
-		.marginl{
-			@include margin_l(18px);
-		}
-		.marginr{
-			@include margin_l(18px);
-			@include margin_r(18px);
-		}
-		
-		figure{
-			@include float_block($float_l);
-			border-radius: 3px;
-			border: 1px solid #ddd;
-			margin:0px 0px 21px 0px;
-			figcaption{
-				font-family: Arial;
-				font-weight: bold;
-				@include margin_l(17px);
-				@include margin_t(15px);
+	.main{
+		main{
+			width: 1240px;
+			float: left;
+			@include padding_b(32px);
+			.marginl{
+				@include margin_l(18px);
 			}
-			p{
-				margin: 10px 0px 15px 17px;
-				span{
-					color: $color-money;
+			.marginr{
+				@include margin_l(18px);
+				@include margin_r(18px);
+			}
+
+			figure{
+				@include float_block($float_l);
+				border-radius: 3px;
+				border: 1px solid #ddd;
+				margin:0px 0px 21px 0px;
+				figcaption{
+					font-family: Arial;
 					font-weight: bold;
+					@include margin_l(17px);
+					@include margin_t(15px);
 				}
-			}
-			span{
+				p{
+					margin: 10px 0px 15px 17px;
+					span{
+						color: $color-money;
+						font-weight: bold;
+						margin-right: 5px;
+					}
+				}
+				.details{
+					height: 25px;
+					float: right;
+					cursor: pointer;
+				}
 			}
 		}
 	}
-
+	.giohang{
+		float: left;
+		margin-left: 30px;
+		h2{
+			margin: 0px;
+		}
+		p{
+			line-height: 1.5;
+			span{
+				margin-right: 5px;
+			}
+		}
+	}
 }
 footer{
 	@extend %paddingbt;	

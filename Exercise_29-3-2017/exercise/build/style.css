@@ -11,7 +11,7 @@ header .header-right .head-right-top .phone p, header .header-right .head-right-
     color: #FDB300;
     font-weight: bold; }
 
-header, section, footer {
+header, footer {
   margin-right: 180px;
   margin-left: 180px;
   width: 1240px; }
@@ -80,6 +80,7 @@ header {
       margin-left: 450px; }
 
 section {
+  margin-left: 180px;
   padding-bottom: 12px; }
   section aside {
     margin-bottom: 49px; }
@@ -97,28 +98,44 @@ section {
       section aside .category div.center-cat {
         margin-left: 17px;
         margin-right: 17px; }
-  section main {
+  section .main main {
+    width: 1240px;
+    float: left;
     padding-bottom: 32px; }
-    section main .marginl {
+    section .main main .marginl {
       margin-left: 18px; }
-    section main .marginr {
+    section .main main .marginr {
       margin-left: 18px;
       margin-right: 18px; }
-    section main figure {
+    section .main main figure {
       float: left;
       border-radius: 3px;
       border: 1px solid #ddd;
       margin: 0px 0px 21px 0px; }
-      section main figure figcaption {
+      section .main main figure figcaption {
         font-family: Arial;
         font-weight: bold;
         margin-left: 17px;
         margin-top: 15px; }
-      section main figure p {
+      section .main main figure p {
         margin: 10px 0px 15px 17px; }
-        section main figure p span {
+        section .main main figure p span {
           color: #2AB5F2;
-          font-weight: bold; }
+          font-weight: bold;
+          margin-right: 5px; }
+      section .main main figure .details {
+        height: 25px;
+        float: right;
+        cursor: pointer; }
+  section .giohang {
+    float: left;
+    margin-left: 30px; }
+    section .giohang h2 {
+      margin: 0px; }
+    section .giohang p {
+      line-height: 1.5; }
+      section .giohang p span {
+        margin-right: 5px; }
 
 footer {
   border-top: 1px solid #bbb;
