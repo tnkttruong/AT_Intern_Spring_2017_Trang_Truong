@@ -6,7 +6,7 @@
   <title>Carts details</title>
   <link rel="stylesheet" href="build/style_detail_carts.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <script src="js/jquery-3.2.0.min.js"></script>
+  <!-- <script src="js/jquery-3.2.0.min.js"></script> -->
 </head>
 <body>
   <h2>List tours</h2>
@@ -30,35 +30,80 @@
   </table>
   <input type="submit" name="" id="submit" value="Submit">
   <script>
-   $(document).ready(function(){
-    var arr_tour = JSON.parse(sessionStorage.getItem('carts'));
-    if (arr_tour != null){
-      var length = arr_tour.length;
-      for (var i = 0 ; i < length; i++) {
-        $tr1 = document.createElement('tr');
-        str = '<td>' + arr_tour[i].name + '</td> <td class="price">' + arr_tour[i].price + '</td> <td><input type="number" min="0"></td> <td class="total">0</td>';
-        $(str).appendTo($tr1);
-        $("tbody").append($tr1);
-      }
+  //  $(document).ready(function(){
+  //   var arr_tour = JSON.parse(sessionStorage.getItem('carts'));
+  //   if (arr_tour != null){
+  //     var length = arr_tour.length;
+  //     for (var i = 0 ; i < length; i++) {
+  //       $tr1 = document.createElement('tr');
+  //       str = '<td>' + arr_tour[i].name + '</td> <td class="price">' + arr_tour[i].price + '</td> <td><input type="number" min="0"></td> <td class="total">0</td>';
+  //       $(str).appendTo($tr1);
+  //       $("tbody").append($tr1);
+  //     }
 
+  //   }
+  //   $( "input[type='number']" ).change(function() {
+  //     $tr = $(this).parent().parent();
+  //     var total = parseInt($("#total_price").html());
+  //     var price = $tr.find('.price').html();
+  //     var quantity = $(this).val();
+  //     old_money = $tr.find('.total').text();
+  //     $tr.find('.total').text(price * quantity);
+  //     new_money = (price * quantity);
+  //     total = total - parseInt(old_money) + parseInt(new_money);
+  //     $("#total_price").text(total);
+  //   });
+  //   $("#submit").click(function(){
+  //     var total = $("#total_price").html();
+  //     total = total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+  //     alert("You have just successfully set tours with total money: " + total + " VNĐ");
+  //   });
+  // });
+  var $tbody = document.getElementsByTagName("TBODY")[0];
+  var arr_tour = JSON.parse(sessionStorage.getItem('carts'));
+  if (arr_tour != null){
+    var length = arr_tour.length;
+    for (var i = 0 ; i < length; i++) {
+      $tr = document.createElement('tr');
+      var $td = document.createElement("TD");
+      $td.innerHTML = arr_tour[i].name;
+      $tr.appendChild($td);
+
+      $td = document.createElement("TD");
+      $td.innerHTML = arr_tour[i].price;
+      $td.setAttribute("class", "price")
+      $tr.appendChild($td);
+
+      $td = document.createElement("TD");
+      $input = document.createElement("input");
+      $input.setAttribute("type", "number");
+      $input.setAttribute("min", "0");
+      $td.appendChild($input);
+      $td.addEventListener('change', function(){
+        $total_price = document.getElementById("total_price");
+        $tr = this.parentNode;
+        var price = $tr.childNodes[1].innerHTML;
+        var quantity = this.childNodes[0].value;
+        var old_money = $tr.childNodes[3].innerHTML;
+        var new_money = (price * quantity);
+        $tr.childNodes[3].innerHTML = new_money;
+        total = $total_price.innerHTML - parseInt(old_money) + parseInt(new_money);
+        $total_price.innerHTML = total;
+      });
+      $tr.appendChild($td);
+
+      $td = document.createElement("TD");
+      $td.innerHTML = 0;
+      $tr.appendChild($td);
+
+      $tbody.appendChild($tr);
     }
-    $( "input[type='number']" ).change(function() {
-      $tr = $(this).parent().parent();
-      var total = parseInt($("#total_price").html());
-      var price = $tr.find('.price').html();
-      var quantity = $(this).val();
-      old_money = $tr.find('.total').text();
-      $tr.find('.total').text(price * quantity);
-      new_money = $tr.find('.total').text();
-      total = total - parseInt(old_money) + parseInt(new_money);
-      $("#total_price").text(total);
-      arr_total = $(".total");
-    });
-    $("#submit").click(function(){
-      var total = $("#total_price").html();
-      total = total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
-      alert("You have just successfully set tours with total money: " + total + " VNĐ");
-    });
+  }
+  $submit = document.getElementById("submit");
+  $submit.addEventListener('click', function(){
+    var total = document.getElementById("total_price").innerHTML;
+    total = total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+    alert("You have just successfully set tours with total money: " + total + " VNĐ");
   });
 </script>
 </body>

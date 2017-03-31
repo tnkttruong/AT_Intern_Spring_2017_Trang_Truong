@@ -5,7 +5,9 @@
   <title>Exercise</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="build/style.css">
+  <!--
   <script src="js/jquery-3.2.0.min.js"></script>
+  -->
 </head>
 <body>
   <header>
@@ -66,7 +68,13 @@
      </div>
    </aside>
    <div class="main">
-
+    <div class="giohang">
+      <h2>Giỏ hàng</h2>
+      <p>Bạn đã chọn <br>
+        <span id="num_of_carts">0</span>tour<br>
+        <a href="detail_carts.html" title="chi tiet gio hang"><span>Chi tiết</span></a>
+      </p>
+    </div>
     <main>
       <figure>
         <img src="images/hn-pq.jpg" alt="">
@@ -141,13 +149,7 @@
         <img src="images/next.jpg" class = "details" alt="next">
       </figure>
     </main>
-    <div class="giohang">
-      <h2>Giỏ hàng</h2>
-      <p>Bạn đã chọn <br>
-        <span id="num_of_carts">0</span>tour<br>
-        <a href="detail_carts.html" title="chi tiet gio hang"><span>Chi tiết</span></a>
-      </p>
-    </div>
+
   </div>
   <div class="clr">  </div>
 </section>
@@ -183,34 +185,65 @@
   </div>
 </footer>
 <script type="text/javascript">
-  $(document).ready(function(){
-    function get_arr_tours(){
-      return JSON.parse(sessionStorage.getItem('carts'));
-    }
+  // $(document).ready(function(){
+  //   function get_arr_tours(){
+  //     return JSON.parse(sessionStorage.getItem('carts'));
+  //   }
+  //   var tours = get_arr_tours();
+  //   var num_of_carts;
+  //   if (tours == null){
+  //     num_of_carts = 0;
+  //   } else{
+  //     num_of_carts = tours.length;
+  //   }
+  //   $("#num_of_carts").html(num_of_carts);
+  //   $("figure .details").click(function(){
+  //     var arr_tour = get_arr_tours();
+  //     var name = $(this).parent().find('figcaption').html();
+  //     if (arr_tour == null){
+  //       arr_tour = [];
+  //     }
+  //     var price = $(this).parent().find('.price').html();
+  //     price = price.replace(/\./g, '')
+  //     var tour = {name: name, price: price};
+  //     arr_tour.push(tour);
+  //     var str = JSON.stringify(arr_tour);
+  //     sessionStorage.setItem('carts', str);
+  //     num_of_carts += 1;
+  //     $("#num_of_carts").html(num_of_carts);  
+  //   });
+  // });
+  function get_arr_tours(){
+    return JSON.parse(sessionStorage.getItem('carts'));
+  }
   var tours = get_arr_tours();
-  var num_of_carts;
   if (tours == null){
     num_of_carts = 0;
   } else{
     num_of_carts = tours.length;
   }
-  $("#num_of_carts").html(num_of_carts);
-  $("figure .details").click(function(){
-    var arr_tour = get_arr_tours();
-    var name = $(this).parent().find('figcaption').html();
-    if (arr_tour == null){
-      arr_tour = [];
-    }
-    var price = $(this).parent().find('.price').html();
-    price = price.replace(/\./g, '')
-    var tour = {name: name, price: price};
-    arr_tour.push(tour);
-    var str = JSON.stringify(arr_tour);
-    sessionStorage.setItem('carts', str);
-    num_of_carts += 1;
-    $("#num_of_carts").html(num_of_carts);  
-  });
-});
+  var $span_carts = document.getElementById("num_of_carts");
+  $span_carts.innerHTML = num_of_carts;
+  var imgs = document.querySelectorAll('.details');
+  var count = imgs.length;
+  for (var i = 0; i < count; i++) {
+    imgs[i].addEventListener('click', function() {
+      var arr_tour = get_arr_tours();
+       if (arr_tour == null){
+        arr_tour = [];
+      }
+      var $figure = this.parentNode.childNodes;
+      var name = $figure[3].innerHTML;
+      var price = $figure[5].childNodes[1].innerHTML;
+      price = price.replace(/\./g, '')
+      var tour = {name: name, price: price};
+      arr_tour.push(tour);
+      var str = JSON.stringify(arr_tour);
+      sessionStorage.setItem('carts', str);
+      num_of_carts += 1;
+      $span_carts.innerHTML = num_of_carts;
+    });
+  }
 </script>
 </body>
 </html>

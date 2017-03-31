@@ -12,8 +12,7 @@ header .header-right .head-right-top .phone p, header .header-right .head-right-
     font-weight: bold; }
 
 header, footer {
-  margin-right: 180px;
-  margin-left: 180px;
+  margin-left: 25px;
   width: 1240px; }
 
 header .header-right .menu ul, footer ul {
@@ -37,8 +36,7 @@ a {
 
 body {
   margin-left: 0px;
-  padding: 10px 0px 25px 0px;
-  width: 1600px; }
+  padding: 10px 0px 25px 0px; }
 
 header {
   margin-bottom: 10px; }
@@ -80,7 +78,7 @@ header {
       margin-left: 450px; }
 
 section {
-  margin-left: 180px;
+  margin-left: 25px;
   padding-bottom: 12px; }
   section aside {
     margin-bottom: 49px; }

@@ -17,7 +17,6 @@ a{
 body{
 	@include margin_l(0px);
 	padding: 10px 0px 25px 0px;
-	width: 1600px;
 }
 header{
 	@extend %paddingbt;
@@ -84,7 +83,7 @@ header{
 	}
 }
 section{
-	margin-left: 180px;
+	margin-left: 25px;
 	@include padding_b(12px);
 	aside{
 		@include margin_b(49px);
