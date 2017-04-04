@@ -20,6 +20,7 @@ m = Main.new
 #arr.shift
 #m.get_score arr
 #=================new way
+m.creat_database
 
 data = m.get_data_from_web_by_nokogiri
 

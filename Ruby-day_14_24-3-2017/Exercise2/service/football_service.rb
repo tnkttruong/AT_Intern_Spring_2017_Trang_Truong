@@ -2,11 +2,9 @@ require 'pry'
 module FootballService
 
 	def creat_table adapter
-		@sqladapter.client.query("alter table `leagues` add column `name` varchar(100) not null default '' 
-			AFTER `leagues_id` ,add column `W` int(10) not null default '0' AFTER `name` ,add column `D` int(10) not null default '0' 
-			AFTER `W` ,add column `L` int(10) not null default '0' AFTER `D` ,add column `GF` int(10) not null default '0' 
-			AFTER `L` ,add column `GA` int(10) not null default '0' AFTER `GF` ,add column `GD` int(10) not null default '0' 
-			AFTER `GA` ,add column `Pts` int(10) not null default '0' AFTER `GD` ,comment = 'latin1_swedish_ci' ")
+		@sqladapter.client.query("CREATE TABLE IF NOT EXISTS leagues (leagues_id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255) NOT NULL,W INT NULL default 0,
+			D INT NULL default 0, L INT NULL default 0, GF INT NULL default 0,GA INT NULL default 0,
+			GD INT NULL default 0,Pts INT NULL default 0, PRIMARY KEY (leagues_id))")
 	end
 
 	def insert_team(adapter, teamname, leagues_id)
