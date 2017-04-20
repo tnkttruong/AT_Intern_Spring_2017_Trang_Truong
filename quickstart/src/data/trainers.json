@@ -1,0 +1,14 @@
+{
+	"trainers":  [
+		{ "name": "Dy",
+			"fullName": "Dy Pham D.",  
+			"birthday": "1993", 
+			"team": "Ruby" 
+		},
+		{ "name": "Vi",
+			"fullName": "Vi Nguyen H.T",
+			"birthday": "1989",
+			"team": "FE" 
+		}
+	]
+}
