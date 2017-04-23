@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { TrainerService } from './trainers.service';
 
 @Component({
@@ -16,10 +16,7 @@ import { TrainerService } from './trainers.service';
 `]
 })
 export class TrainersDetailsComponent  { 
-	@Input('index') set config(index){
-		this.selected = this.trainers[index];
-	}
-	//@Input() index: number;
+	@Input() index: number;
 	trainers: any;
 	selected: any;
 	constructor(private _trainer: TrainerService){
@@ -28,7 +25,12 @@ export class TrainersDetailsComponent  {
 		.subscribe((data :any) => {
 			this.trainers = data.trainers;
 		});
+		this.selected = this.trainers[0];
 	}
+
+	ngOnChanges() {
+		if(this.index != null){
+			this.selected = this.trainers[this.index];
+		}
+  }
 }
-
-

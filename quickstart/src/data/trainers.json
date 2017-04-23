@@ -1,14 +1,88 @@
 {
-	"trainers":  [
-		{ "name": "Dy",
-			"fullName": "Dy Pham D.",  
-			"birthday": "1993", 
-			"team": "Ruby" 
-		},
-		{ "name": "Vi",
-			"fullName": "Vi Nguyen H.T",
-			"birthday": "1989",
-			"team": "FE" 
-		}
-	]
+"trainers": [
+  {
+    "name": "Anh Nguyen T.",
+    "team": "FE",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Hoang Nguyen L.",
+    "team": "FE",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Trang Nguyen T.",
+    "team": "FE",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Nam Le H.",
+    "team": "FE",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Duong Le C.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Duy Nguyen P.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Huy Nguyen V.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Minh Tang Q.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Thap Nguyen T.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Tho Le V.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Trang Truong C.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Nhan Dang D.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Dieu Le X.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  },
+  {
+    "name": "Tinh Dang T.",
+    "team": "Ruby",
+    "avatar": "",
+    "joined": "06-03-2017"
+  }
+]
 }
