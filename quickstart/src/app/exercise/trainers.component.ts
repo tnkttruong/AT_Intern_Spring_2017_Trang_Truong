@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject	 } from '@angular/core';
 import { TrainerService } from './trainers.service';
+import {FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
 	selector: 'trainers',
@@ -19,25 +20,73 @@ import { TrainerService } from './trainers.service';
 	`]
 })
 export class TrainersComponent  {
-	@Input('myCity') strCity : string;
 	trainers: any;
 	selected: number;
+	first_names: string;
 	team_name: string;
-	input_name: string;
-	constructor(private _trainer: TrainerService){
+	newMember: any;
+	first_name = new FormControl('',[
+		Validators.required
+	]);
+	last_name = new FormControl('',[
+		Validators.required
+	]);
+	birthday = new FormControl('');
+	team = new FormControl('',[
+		Validators.required
+	]);
+	email = new FormControl('');
+	github = new FormControl('',[
+		Validators.required
+	]);
+  
+	trainerForm: any;
+	constructor(private _trainer: TrainerService, private _builder: FormBuilder){
 		this.trainers = [];
-		this._trainer.getAllTrainer()
-		.subscribe((data :any) => {
-			this.trainers = data.trainers;
-		});
+		// this._trainer.getAllTrainer()
+		// .subscribe((data :any) => {
+		// 	this.trainers = data.trainers;
+		// });
+		this.trainerForm = this._builder.group({
+    first_name: this.first_name,
+    last_name: this.last_name,
+    birthday: this.birthday,
+    team: this.team,
+    email: this.email,
+    github: this.github,
+  	});
 		this.team_name = 'load';
+		this.newMember = {
+			first_name: '',
+			last_name: '',
+			birthday: '',
+			email: '',
+			github: ''
+		};
+
+	this.first_name.valueChanges
+	.subscribe(formData => {
+		this.updateEmail();
+	});
+
+	this.last_name.valueChanges
+	.subscribe(formData => {
+		this.updateEmail();
+	});
 	}
 
 	show(index: number){
 		this.selected = index;
 	}
 
-	get_member(){
-		this.team_name = this.input_name;
+	addMember(){
+		this.newMember = (this.trainerForm.value);
+		this.trainers.push(this.newMember);
 	}
+
+	updateEmail(){
+		var email = this.first_name.value + '.' + this.last_name.value + '@asiantech.vn';
+		this.email.setValue(email);
+	}
+
 }

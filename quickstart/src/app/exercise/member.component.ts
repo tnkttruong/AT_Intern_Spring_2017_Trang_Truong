@@ -17,7 +17,7 @@ export class MemberComponent{
 		});
 	}
 	ngOnChanges() {
-		if(this.team_name === undefined){
+		if(this.team_name === ''){
 			this.team_name = "All";
 		}
   }
