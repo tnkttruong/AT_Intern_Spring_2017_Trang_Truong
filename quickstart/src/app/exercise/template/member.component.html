@@ -1,0 +1,23 @@
+<div class="member" *ngIf = "team_name !== 'load'">
+  <table class="table table-bordered" *ngIf = "(trainers | member: team_name).length > 0; else elseBlock">
+    <caption><h2>{{team_name}} Members</h2></caption>
+    <thead>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Avatar</th>
+      <th>Joined</th>
+    </thead>
+    <tbody *ngFor = 'let trainer of (trainers | member: team_name); let i = index;'>
+      <tr>
+        <td> {{trainer.name}} </td>
+        <td> {{trainer.team | uppercase }} </td>
+        <td> {{trainer.avatar | avatar}} 
+        </td>
+        <td> {{trainer.joined | date: "EEEE/dd/MMM/y"}} </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #elseBlock>
+    <h3> No matches result </h3>
+  </ng-template>
+</div>

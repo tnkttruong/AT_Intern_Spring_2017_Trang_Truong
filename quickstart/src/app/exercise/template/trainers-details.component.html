@@ -1,0 +1,18 @@
+<div class="trainers-details">
+  <table class="table table-bordered" *ngIf = "selected != null">
+    <caption><h2>Detail</h2></caption>
+    <tr>
+      <td>Name</td>
+      <td>Team</td>
+      <td>Avatar</td>
+      <td>Joined</td>
+    </tr>
+    <tr>
+      <td> {{selected.name}} </td>
+      <td> {{selected.team}} </td>
+      <td> {{selected.avatar | avatar}} 
+      </td>
+      <td> {{selected.joined}} </td>
+    </tr>
+  </table>
+</div>

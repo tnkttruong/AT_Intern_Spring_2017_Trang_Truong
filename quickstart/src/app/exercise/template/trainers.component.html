@@ -1,0 +1,50 @@
+<div class="trainer">
+  <table class="table table-bordered">
+    <caption>
+      <h1> Trainers</h1>
+      <div>
+        <form [formGroup]="trainerForm" (ngSubmit)="addMember()">
+          <fieldset>
+            <div class="form-group">
+              <input type="text" id="first_name"  name ="first_name" [formControl]="first_name" placeholder="first_name" class="form-control">
+            </div> 
+            <div class="form-group">
+              <input type="text" id="last_name"  name ="last_name" [formControl]="last_name" placeholder="last_name"
+              class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="birthday" id="birthday" [formControl]="birthday" placeholder="birthday" 
+              class="form-control" >
+            </div>
+            <div class="form-group">
+              <input type="text" name="team" id="team" [formControl]="team" placeholder="team" 
+              class="form-control">
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="form-group">
+              <input type="text" name="email" id="email" [formControl]="email" placeholder="email" 
+              class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="github" id="github" [formControl]="github" placeholder="github" 
+              class="form-control" >
+            </div>
+          </fieldset>
+          <button class="btn-info btn" [disabled]="!trainerForm.valid" type="submit">Add Member</button>
+        </form>
+      </div>
+    </caption>
+    <tr *ngFor = 'let trainer of (trainers); let i = index;'>
+      <td>{{trainer.name}}</td>
+      <td>{{trainer.birthday}}</td>
+      <td>{{trainer.team }}</td>
+      <td>{{trainer.email }}</td>
+      <td>{{trainer.github }}</td>
+    </tr>
+  </table>
+</div>
+<div class="info">
+  <trainers-details [index] = "selected"> </trainers-details>
+  <member [team_name] = "team_name"></member>
+</div>
