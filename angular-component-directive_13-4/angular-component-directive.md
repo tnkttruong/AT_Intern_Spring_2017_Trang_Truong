@@ -104,8 +104,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'two-way-data-binding',
   template: `
-	<h2> My name is {{name}}
-  	<p [myColor] = "yelow" >Highlight me!</p>
+	<h2> My name is {{name}} </h2>
+  	<p [myColor] = "yelow" > Highlight me! </p>
 
   `,
 })
